@@ -2,15 +2,13 @@
 /backend/target/
 /backend/build/
 /backend/.idea/
+/backend/.vscode/
+/backend/mvn/
 *.iml
 
-# Log files
 *.log
-# VSCode
 .vscode/
 
-# Maven
-.mvn/
 
 # Angular / Node
 /frontend/node_modules/
