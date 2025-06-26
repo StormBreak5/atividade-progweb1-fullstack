@@ -4,11 +4,20 @@
 /backend/.idea/
 *.iml
 
+# Log files
+*.log
+# VSCode
+.vscode/
+
+# Maven
+.mvn/
+
 # Angular / Node
 /frontend/node_modules/
 /frontend/dist/
 /frontend/.angular/cache/
 npm-debug.log
+/frontend/coverage/
 
 .env
 *.env
