@@ -1,0 +1,20 @@
+<!-- app.component.html -->
+
+<mat-toolbar class="header-container" color="primary">
+  <div style="display: flex; align-items: center;">
+    <img src="assets/imagem/LogoBookly.png" alt="Logo Bookly" style="max-height: 50px; width: auto;">
+    <span class="titulo" style="margin-left: 10px;">Bookly</span>
+  </div>
+  <div class="buttons" style="margin-left: auto;">
+    <button mat-raised-button color="accent" routerLink="">
+      <mat-icon>book</mat-icon> Livros
+    </button>
+    <button mat-raised-button color="accent" routerLink="create">
+      <mat-icon>create</mat-icon> Cadastrar Livro
+    </button>
+  </div>
+</mat-toolbar>
+
+<main class="content-scrollable">
+  <router-outlet></router-outlet>
+</main>

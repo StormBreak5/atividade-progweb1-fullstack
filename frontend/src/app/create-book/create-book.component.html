@@ -1,0 +1,56 @@
+<div class="cadastro-container">
+  <mat-card class="cadastro-card">
+    <mat-card-title class="titulo-cadastro">
+      {{ isEditMode ? 'Editar Livro' : 'Cadastre um livro:' }}
+    </mat-card-title>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nome do Livro</mat-label>
+        <input matInput placeholder="Digite o nome do livro" formControlName="titulo"/>
+        <mat-error>O nome do livro é obrigatório.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Autor</mat-label>
+        <input matInput placeholder="Digite o nome do autor" formControlName="autor"/>
+        <mat-error>O autor é obrigatório.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Editora</mat-label>
+        <input matInput placeholder="Digite o nome da editora" formControlName="editora"/>
+        <mat-error>A editora é obrigatória.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>ISBN</mat-label>
+        <input matInput placeholder="Digite o ISBN" formControlName="isbn"/>
+        <mat-error>O ISBN é obrigatório.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Categoria</mat-label>
+        <input matInput placeholder="Digite a categoria" formControlName="categoria"/>
+        <mat-error>A categoria é obrigatória.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Data de Lançamento</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Selecione a data" formControlName="dataPublicacao"/>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error>A data é obrigatória.</mat-error>
+      </mat-form-field>
+
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+          Salvar
+        </button>
+        <button mat-raised-button color="warn" type="button" routerLink="/">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>

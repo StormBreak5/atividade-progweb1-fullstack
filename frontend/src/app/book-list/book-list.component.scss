@@ -1,0 +1,41 @@
+.inicio-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.titulo_livro{
+  color: #005cbb;
+}
+
+.autor_livro{
+  font-weight: normal;
+}
