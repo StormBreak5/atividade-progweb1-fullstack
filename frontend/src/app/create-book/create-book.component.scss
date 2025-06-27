@@ -2,35 +2,57 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 32px;
-}
-.titulo-cadastro{
-  margin-bottom: 35px;
-  color: #005cbb;
-  font-size: 35px;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .cadastro-card {
   width: 100%;
   max-width: 500px;
-  padding: 24px;
+  padding: 16px;
+}
+
+.titulo-cadastro {
+  margin-bottom: 20px;
+  color: #005cbb;
+  font-size: 24px;
 }
 
 .full-width {
   width: 100%;
-  margin-bottom: 16px;
-}
-
-.toggle-container {
-  margin: 16px 0;
+  margin-bottom: 10px;
 }
 
 .form-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .mat-warn {
   color: #f44336 !important;
+}
+
+@media (min-width: 600px) {
+  .cadastro-container {
+    align-items: center;
+    min-height: calc(100vh - 128px);
+  }
+
+  .cadastro-card {
+    padding: 24px;
+  }
+
+  .titulo-cadastro {
+    font-size: 30px;
+  }
+
+  .full-width {
+    margin-bottom: 12px;
+  }
+
+  .form-actions {
+    margin-top: 24px;
+  }
 }

@@ -1,5 +1,3 @@
-<!-- app.component.html -->
-
 <mat-toolbar class="header-container" color="primary">
   <div style="display: flex; align-items: center;">
     <img src="assets/imagem/LogoBookly.png" alt="Logo Bookly" style="max-height: 50px; width: auto;">
@@ -15,6 +13,11 @@
   </div>
 </mat-toolbar>
 
-<main class="content-scrollable">
+<main class="content-scrollable" #scrollContainer (scroll)="onScroll($event)">
   <router-outlet></router-outlet>
-</main>
+</main>end
+
+<button *ngIf="showScrollButton" mat-fab color="accent" class="scroll-to-top-button" (click)="scrollToTop()"
+        matTooltip="Voltar ao Topo">
+  <mat-icon>arrow_upward</mat-icon>
+</button>

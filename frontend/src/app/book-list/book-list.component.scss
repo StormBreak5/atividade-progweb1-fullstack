@@ -5,37 +5,75 @@
   box-sizing: border-box;
 }
 
-.search-bar {
+.controls-bar {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 24px;
   align-items: center;
+  justify-content: space-between;
   padding: 0 16px;
 }
 
+.search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.sort-controls {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  align-items: center;
+}
+
 .search-input {
-  flex: 1;
-  min-width: 250px;
+  flex-grow: 1;
+  min-width: 200px;
 }
 
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
-  padding: 16px;
+  padding: 0 16px;
+  align-items: stretch;
 }
 
 .book-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
-.titulo_livro{
-  color: #005cbb;
+.card-content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.autor_livro{
+mat-card-header {
+  flex-shrink: 0;
+}
+
+mat-card-content {
+  flex-grow: 1;
+  padding-top: 16px;
+}
+
+.titulo_livro {
+  color: #005cbb;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.autor_livro {
   font-weight: normal;
+  margin-top: 4px;
+  white-space: normal;
 }

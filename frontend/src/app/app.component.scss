@@ -3,15 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-
   background-color: #f8f9fa;
 }
-.titulo{
+
+.titulo {
   color: #005cbb;
   font-size: 35px;
   font-weight: initial;
   margin-left: 5px;
 }
+
 .buttons {
   display: flex;
   gap: 10px;
@@ -19,4 +20,11 @@
 
 a {
   text-decoration: none;
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
 }
