@@ -9,6 +9,8 @@
 *.log
 .vscode/
 
+.idea/
+
 
 # Angular / Node
 /frontend/node_modules/
